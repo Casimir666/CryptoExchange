@@ -1,0 +1,74 @@
+﻿[
+  {
+    "id": "LTC-EUR",
+    "base_currency": "LTC",
+    "quote_currency": "EUR",
+    "base_min_size": 0.01,
+    "base_max_size": 1000000.0,
+    "quote_increment": 0.01
+  },
+  {
+    "id": "LTC-BTC",
+    "base_currency": "LTC",
+    "quote_currency": "BTC",
+    "base_min_size": 0.01,
+    "base_max_size": 1000000.0,
+    "quote_increment": 0.00001
+  },
+  {
+    "id": "BTC-GBP",
+    "base_currency": "BTC",
+    "quote_currency": "GBP",
+    "base_min_size": 0.01,
+    "base_max_size": 250.0,
+    "quote_increment": 0.01
+  },
+  {
+    "id": "BTC-EUR",
+    "base_currency": "BTC",
+    "quote_currency": "EUR",
+    "base_min_size": 0.01,
+    "base_max_size": 250.0,
+    "quote_increment": 0.01
+  },
+  {
+    "id": "ETH-EUR",
+    "base_currency": "ETH",
+    "quote_currency": "EUR",
+    "base_min_size": 0.01,
+    "base_max_size": 5000.0,
+    "quote_increment": 0.01
+  },
+  {
+    "id": "ETH-BTC",
+    "base_currency": "ETH",
+    "quote_currency": "BTC",
+    "base_min_size": 0.01,
+    "base_max_size": 5000.0,
+    "quote_increment": 0.00001
+  },
+  {
+    "id": "LTC-USD",
+    "base_currency": "LTC",
+    "quote_currency": "USD",
+    "base_min_size": 0.01,
+    "base_max_size": 1000000.0,
+    "quote_increment": 0.01
+  },
+  {
+    "id": "BTC-USD",
+    "base_currency": "BTC",
+    "quote_currency": "USD",
+    "base_min_size": 0.01,
+    "base_max_size": 250.0,
+    "quote_increment": 0.01
+  },
+  {
+    "id": "ETH-USD",
+    "base_currency": "ETH",
+    "quote_currency": "USD",
+    "base_min_size": 0.01,
+    "base_max_size": 5000.0,
+    "quote_increment": 0.01
+  }
+]

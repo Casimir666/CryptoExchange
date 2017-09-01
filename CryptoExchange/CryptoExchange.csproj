@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{002199DA-A418-4B4F-A3F4-021CDD86E682}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CryptoExchange</RootNamespace>
+    <AssemblyName>CryptoExchange</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FubarCoder.RestSharp.Portable.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Core.4.0.8\lib\net45\FubarCoder.RestSharp.Portable.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.HttpClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.HttpClient.4.0.8\lib\net45\FubarCoder.RestSharp.Portable.HttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.WebSockets, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.WebSockets.4.3.0\lib\net46\System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.WebSockets.Client.4.3.1\lib\net46\System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net46\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coinbase\Account.cs" />
+    <Compile Include="Coinbase\Addresses.cs" />
+    <Compile Include="Coinbase\Client.cs" />
+    <Compile Include="Coinbase\CoinbaseResponse.cs" />
+    <Compile Include="Coinbase\Constants.cs" />
+    <Compile Include="Common\BinaryExtensiong.cs" />
+    <Compile Include="Common\Country.cs" />
+    <Compile Include="Coinbase\ExchangeRate.cs" />
+    <Compile Include="Coinbase\FiatAccount.cs" />
+    <Compile Include="Coinbase\Order.cs" />
+    <Compile Include="Coinbase\OrderRequest.cs" />
+    <Compile Include="Coinbase\PaymentMethod.cs" />
+    <Compile Include="Coinbase\Prices.cs" />
+    <Compile Include="Coinbase\Transaction.cs" />
+    <Compile Include="Coinbase\User.cs" />
+    <Compile Include="Common\ApiAuthenticator.cs" />
+    <Compile Include="Common\Balance.cs" />
+    <Compile Include="Common\BaseClient.cs" />
+    <Compile Include="Common\Currency.cs" />
+    <Compile Include="Common\EnumHelper.cs" />
+    <Compile Include="Common\EpochConverter.cs" />
+    <Compile Include="Common\MicrosecondEpochConverter.cs" />
+    <Compile Include="Common\NullLogger.cs" />
+    <Compile Include="Common\UwpExtensions.cs" />
+    <Compile Include="Common\WebSocketExtension.cs" />
+    <Compile Include="Gdax\Account.cs" />
+    <Compile Include="Gdax\ApiException.cs" />
+    <Compile Include="Gdax\Book\BookBase.cs" />
+    <Compile Include="Gdax\Book\BookChange.cs" />
+    <Compile Include="Gdax\Book\BookDone.cs" />
+    <Compile Include="Gdax\Book\BookHeartbeat.cs" />
+    <Compile Include="Gdax\Book\BookMatch.cs" />
+    <Compile Include="Gdax\Book\BookOpen.cs" />
+    <Compile Include="Gdax\Book\BookOrder.cs" />
+    <Compile Include="Gdax\Book\BookReceive.cs" />
+    <Compile Include="Gdax\Book\GdaxFile.cs" />
+    <Compile Include="Gdax\Candle.cs" />
+    <Compile Include="Gdax\Client.cs" />
+    <Compile Include="ClientMode.cs" />
+    <Compile Include="Gdax\CoinbaseAccount.cs" />
+    <Compile Include="Gdax\Constants.cs" />
+    <Compile Include="Gdax\CurrencyDetail.cs" />
+    <Compile Include="Gdax\ErrorResponse.cs" />
+    <Compile Include="Gdax\Fill.cs" />
+    <Compile Include="Gdax\Funding.cs" />
+    <Compile Include="Gdax\Hold.cs" />
+    <Compile Include="Gdax\ITimeStamped.cs" />
+    <Compile Include="Gdax\OrderDetail.cs" />
+    <Compile Include="Gdax\Enums.cs" />
+    <Compile Include="Gdax\GdaxTime.cs" />
+    <Compile Include="Gdax\PageResult.cs" />
+    <Compile Include="Gdax\PaymentRequest.cs" />
+    <Compile Include="Gdax\PaymentResponse.cs" />
+    <Compile Include="Gdax\Position.cs" />
+    <Compile Include="Gdax\ProductOffer.cs" />
+    <Compile Include="Gdax\ProductOfferComparer.cs" />
+    <Compile Include="Gdax\ProductOfferSerializer.cs" />
+    <Compile Include="Gdax\ProductStat.cs" />
+    <Compile Include="Gdax\ReportInfo.cs" />
+    <Compile Include="Gdax\SepaDepositInformation.cs" />
+    <Compile Include="Gdax\SimulatedClient.cs" />
+    <Compile Include="Gdax\OrderHistory.cs" />
+    <Compile Include="Gdax\Orders\BaseOrder.cs" />
+    <Compile Include="Gdax\Orders\LimitOrder.cs" />
+    <Compile Include="Gdax\Orders\MarketOrder.cs" />
+    <Compile Include="Gdax\Orders\OrderResponse.cs" />
+    <Compile Include="Gdax\Orders\StopOrder.cs" />
+    <Compile Include="Gdax\PaymentMethod.cs" />
+    <Compile Include="Gdax\Product.cs" />
+    <Compile Include="Gdax\ProductBook.cs" />
+    <Compile Include="Gdax\ProductTicker.cs" />
+    <Compile Include="Gdax\Trade.cs" />
+    <Compile Include="Gdax\TrailingVolume.cs" />
+    <Compile Include="Gdax\WireDepositInformation.cs" />
+    <Compile Include="Gdax\WsAuth.cs" />
+    <Compile Include="ICoinbaseClient.cs" />
+    <Compile Include="IGdaxClient.cs" />
+    <Compile Include="IGdaxLog.cs" />
+    <Compile Include="IGdaxSimulator.cs" />
+    <Compile Include="Api.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportRequest.cs" />
+    <Compile Include="Serialization\JsonNetDeseralizer.cs" />
+    <Compile Include="Serialization\JsonNetSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
